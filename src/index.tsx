@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider} from "react-router-dom";
 import PageMain from "./pages/pageMain/pageMain";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import PageContainer from "./widgets/pageContainer/pageContainer";
 import PagePost from "./pages/pagePost/pagePost";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       element: <PageContainer />,
@@ -25,7 +25,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "https://monchusay.github.io/picasso-test-task",
+    basename: "/picasso-test-task",
   },
 );
 
