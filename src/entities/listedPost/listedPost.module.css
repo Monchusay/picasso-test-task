@@ -1,0 +1,29 @@
+.postContainer {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr auto;
+  grid-gap: 1rem;
+  padding: 8px 6px;
+  border-bottom: 1px solid black;
+}
+
+.postContainer > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-self: center;
+  font: normal normal 300 14px sans-serif;
+}
+
+.toPostButton {
+  font: normal normal 300 16px Bahnschrift;
+  margin-left: auto;
+  width: max-content;
+  padding: 2px 6px;
+  background-color: darkblue;
+  color: white;
+  cursor: pointer;
+}
+.toPostButton > a {
+  color: white;
+  text-decoration: none;
+}

@@ -3,16 +3,29 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PageMain from "./pages/pageMain/pageMain";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
+import PageContainer from "./widgets/pageContainer/pageContainer";
+import PagePost from "./pages/pagePost/pagePost";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <PageMain />,
+    element: <PageContainer />,
+    children: [
+      {
+        path: "/",
+        element: <PageMain />,
+      },
+      {
+        path: "/:postId",
+        element: <PagePost />,
+      },
+    ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
+  <Provider store={store}>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </Provider>,
 );
