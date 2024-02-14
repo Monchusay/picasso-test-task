@@ -14,19 +14,16 @@ const router = createHashRouter(
       element: <PageContainer />,
       children: [
         {
-          path: "/",
+          path: "/picasso-test-task",
           element: <PageMain />,
         },
         {
-          path: "/post/:postId",
+          path: "/picasso-test-task/post/:postId",
           element: <PagePost />,
         },
       ],
     },
   ],
-  {
-    basename: "/picasso-test-task",
-  },
 );
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
