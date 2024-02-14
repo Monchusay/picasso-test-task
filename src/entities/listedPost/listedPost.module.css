@@ -5,6 +5,9 @@
   padding: 8px 6px;
   border-bottom: 1px solid black;
 }
+.postContainer:last-of-type {
+  border-bottom: none;
+}
 
 .postContainer > span {
   white-space: nowrap;

@@ -8,21 +8,26 @@ import { store } from "./app/store";
 import PageContainer from "./widgets/pageContainer/pageContainer";
 import PagePost from "./pages/pagePost/pagePost";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      element: <PageContainer />,
+      children: [
+        {
+          path: "/",
+          element: <PageMain />,
+        },
+        {
+          path: "/:postId",
+          element: <PagePost />,
+        },
+      ],
+    },
+  ],
   {
-    element: <PageContainer />,
-    children: [
-      {
-        path: "/",
-        element: <PageMain />,
-      },
-      {
-        path: "/:postId",
-        element: <PagePost />,
-      },
-    ],
+    basename: "/picasso-test-task",
   },
-]);
+);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <Provider store={store}>
