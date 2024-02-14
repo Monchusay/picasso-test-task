@@ -10,7 +10,7 @@ const ListedPost: FC<{ post: Post }> = ({ post }) => {
       <span>{post.title}</span>
       <span>{post.body}</span>
       <div className={style.toPostButton}>
-        <Link to={`/${post.id}`}>Подробнее</Link>
+        <Link to={`/post/${post.id}`}>Подробнее</Link>
       </div>
     </div>
   );
