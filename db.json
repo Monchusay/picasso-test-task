@@ -1,6 +1,8 @@
-[
-  {
-    "id": 1,
-    "pepega": "adawdad"
-  }
-]
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "pepega"
+    }
+  ]
+}
