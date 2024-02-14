@@ -17,7 +17,7 @@ const router = createHashRouter([
         element: <PageMain />,
       },
       {
-        path: "/post/:postId",
+        path: "post/:postId",
         element: <PagePost />,
       },
     ],
