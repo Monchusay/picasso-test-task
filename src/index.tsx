@@ -25,7 +25,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/picasso-test-task",
+    basename: "https://monchusay.github.io/picasso-test-task",
   },
 );
 
